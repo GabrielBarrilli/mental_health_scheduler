@@ -1,0 +1,11 @@
+Profissional,TiposPrincipais,TiposSecundarios,Disponibilidade
+Ana,rotina;triagem,urgencia,Segunda:8-12;Quarta:8-18;Sexta:8-18
+Bruno,urgencia,rotina;triagem,Segunda:8-18;Terca:8-15;Quinta:8-18
+Carla,triagem;rotina,urgencia,Segunda:10-18;Quarta:8-18;Sabado:8-12
+Diego,urgencia;triagem,rotina,Terça:8-18;Quinta:8-18;Sexta:8-12
+Eduardo,rotina;urgencia,triagem,Segunda:8-12;Quinta:8-18;Sabado:8-18
+Fernanda,rotina;triagem,urgencia,Segunda:8-18;Terca:10-14;Quinta:8-18
+Gabriel,urgencia;triagem,rotina,Segunda:8-12;Quarta:12-18;Sexta:8-18
+Helena,rotina;urgencia,triagem,Terça:8-18;Quinta:8-12;Sabado:8-16
+Igor,triagem;urgencia,rotina,Segunda:12-18;Terca:8-12;Quinta:12-18
+Juliana,rotina;triagem,urgencia,Segunda:8-18;Quarta:8-12;Sexta:12-18
