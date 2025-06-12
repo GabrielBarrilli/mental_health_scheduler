@@ -4,13 +4,13 @@ import pandas as pd
 from pulp import LpProblem, LpMinimize, LpVariable, lpSum, LpStatus, LpInteger, LpBinary, value
 from collections import defaultdict
 
-# 1. Parâmetros fixos do modelo
+# 1. parâmetros fixos do modelo
 R = 5
 dias_da_semana = ["Segunda", "Terca", "Quarta", "Quinta", "Sexta", "Sabado"]
 horarios = list(range(8, 18))
 alpha = 1e-4
 
-# 2. Leitura dos CSVs
+# 2. leitura dos CSVs
 df_prof = pd.read_csv("profissionais.csv", dtype=str)
 df_dem = pd.read_csv("demanda_semanal.csv", dtype=str)
 
@@ -35,7 +35,7 @@ d = defaultdict(int)
 for _, linha in df_dem.iterrows():
     d[(linha["Tipo"], linha["Dia"], int(linha["Hora"]))] = int(linha["Demanda"])
 
-# 3. MODELO OTIMIZADO (original)
+# 3. modelo otimizado (original)
 prob = LpProblem("Escalonamento_CuidarBem", LpMinimize)
 x, u = {}, {}
 for p in profissionais:
@@ -97,7 +97,7 @@ for (p, d_sem, h, k), var in x.items():
 pd.DataFrame(aloc_otima).sort_values(["Dia","Hora","Profissional","Tipo"]).to_csv("escalonamento.csv", index=False)
 print("Arquivo 'escalonamento.csv' gerado com sucesso.")
 
-# 4. SOLUÇÃO SIMPLES (heurística)
+# 4. solução simples (heurística)
 aloc_simples = []
 ocupado = defaultdict(bool)
 
@@ -111,7 +111,7 @@ for (tipo, dia, hora), demanda in sorted(d.items()):
                 alocado = True
                 break
         if not alocado:
-            continue  # Demanda não atendida
+            continue  # demanda não atendida
 
 pd.DataFrame(aloc_simples).sort_values(["Dia", "Hora", "Profissional", "Tipo"]).to_csv("escalonamento_simples.csv", index=False)
 print("Arquivo 'escalonamento_simples.csv' gerado com sucesso.")
