@@ -1,4 +1,4 @@
-# Projeto: Otimização de Escalonamento de Atendimentos Psicológicos – Projeto Cuidar Bem
+# Otimização de Escalonamento de Atendimentos Psicológicos – Projeto Cuidar Bem
 
 Este projeto propõe uma solução baseada em modelagem matemática para otimizar o escalonamento de atendimentos psicológicos em um centro comunitário, com base no case "Cuidar Bem".
 
